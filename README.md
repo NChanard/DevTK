@@ -16,7 +16,9 @@ A tool set to help programming.
 ```
 devtools::install_github("Nchanard/DevtoolKit")
 ```
-## 2. Standard
+## 2. Documentation
+https://nchanard.github.io/DevToolKit/
+## 3. Standard
 ### A. Variables
 **Names**  
 Variable names must be written according to the camelCase convention. ***i.e.*** entirely in lower case except for the first letters of the second and subsequent words.
