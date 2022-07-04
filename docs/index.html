@@ -55,7 +55,98 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-A tool set to help programming.
+<div class="section level1">
+<div class="page-header"><h1 id="devtoolkit">DevToolKit<a class="anchor" aria-label="anchor" href="#devtoolkit"></a>
+</h1></div>
+<p>A tool set to help programming.</p>
+<div class="section level3">
+<h3 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a>
+</h3>
+<ul>
+<li>Nicolas Chanard &lt;<a href="mailto:nicolas.chanard@univ-tlse3.fr" class="email">nicolas.chanard@univ-tlse3.fr</a>&gt;</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="version">Version<a class="anchor" aria-label="anchor" href="#version"></a>
+</h3>
+<ul>
+<li>0.1.0</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="depends">Depends<a class="anchor" aria-label="anchor" href="#depends"></a>
+</h3>
+<ul>
+<li>R (&gt;= 4.2.0)<br>
+</li>
+<li>magrittr</li>
+</ul>
+</div>
+<div class="section level3">
+<h3 id="imports">Imports<a class="anchor" aria-label="anchor" href="#imports"></a>
+</h3>
+<ul>
+<li>inline<br>
+</li>
+<li>crayon<br>
+</li>
+<li>stringr</li>
+</ul>
+</div>
+<div class="section level2">
+<h2 id="1-instalation">1. Instalation<a class="anchor" aria-label="anchor" href="#1-instalation"></a>
+</h2>
+<pre><code><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"Nchanard/DevtoolKit"</span><span class="op">)</span></code></pre>
+</div>
+<div class="section level2">
+<h2 id="2-documentation">2. Documentation<a class="anchor" aria-label="anchor" href="#2-documentation"></a>
+</h2>
+<p><a href="https://nchanard.github.io/DevToolKit/" class="external-link uri">https://nchanard.github.io/DevToolKit/</a></p>
+</div>
+<div class="section level2">
+<h2 id="3-standard">3. Standard<a class="anchor" aria-label="anchor" href="#3-standard"></a>
+</h2>
+<div class="section level3">
+<h3 id="a-variables">A. Variables<a class="anchor" aria-label="anchor" href="#a-variables"></a>
+</h3>
+<p><strong>Names</strong><br>
+Variable names must be written according to the camelCase convention. <strong><em>i.e.</em></strong> entirely in lower case except for the first letters of the second and subsequent words. After the name of a variable try to put an extension separated by a dot. This extension informs about the object class of the variable. The extension must be written entirely in lower case and must be an abbreviation. For variables that have several possible object classes, you could separate the extensions by an underscore.</p>
+<p><strong>Extensions</strong><br>
+- .chr &lt;character&gt; …<br>
+- .pth &lt;character&gt; File path<br>
+- .dir &lt;character&gt; Directory path<br>
+- .num &lt;numeric&gt; …<br>
+- .int &lt;numeric&gt; Integer<br>
+- .ndx &lt;numeric&gt; Position Number<br>
+- .tim &lt;numeric&gt; Time<br>
+- .fac &lt;factor&gt; Factor<br>
+- .idn &lt;factor <em>or</em> character <em>or</em> numeric&gt; Identifier (unique)<br>
+- .lgk &lt;logical <em>or</em> function&gt; Logical expression<br>
+- .bln &lt;logical&gt; Boolean<br>
+- .fun &lt;function&gt; Function<br>
+- .any &lt;any&gt; Any<br>
+- .lst &lt;list&gt; …<br>
+- .nst &lt;list&gt; Nested List<br>
+- .{*}_vec &lt;<em>&gt; Vector of an other specific class<br>
+- .{</em>}_lst &lt;list&gt; list of an other specific class<br>
+- .dtf &lt;data.frame&gt; …<br>
+- .tbl &lt;tibble&gt; …<br>
+- .mtx &lt;matrix&gt; …<br>
+- .spm &lt;dgCMatrix <em>or</em> dgRMatrix <em>or other Matrix format</em>&gt; Sparse matrix<br>
+- .gnr &lt;GRanges&gt; …<br>
+- .gnp &lt;Pairs&gt; GeNomic ranges Pairs<br>
+- .gni &lt;GInteractions&gt; GeNomic Interactions<br>
+- .cmx &lt;ContactMatrix&gt; Contact Matrix<br>
+- .ggp &lt;gg <em>or</em> ggplot&gt; ggplot object<br>
+- .col &lt;character <em>or</em> numeric <em>or</em> list&gt; a color in any format</p>
+</div>
+<div class="section level3">
+<h3 id="b-functions">B. Functions<a class="anchor" aria-label="anchor" href="#b-functions"></a>
+</h3>
+<p>Functions names must be written according to the camelCase convention. <strong><em>i.e.</em></strong> entirely in lower case except for the first letters of all words. The name of a function should be an action, a verb or a question.</p>
+</div>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

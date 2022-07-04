@@ -2,7 +2,7 @@ Package: DevToolKit
 Type: Package
 Title: DevToolKit
 Version: 0.1.0
-Author: Nicolas Chanard
+Author: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Maintainer: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Description: A tool set to help programming.
 Depends:
