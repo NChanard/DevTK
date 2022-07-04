@@ -6,7 +6,7 @@ Author: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Maintainer: Nicolas Chanard <nicolas.chanard@univ-tlse3.fr>
 Description: A tool set to help programming.
 Depends:
-    R (>= 4.2.0),
+    R (>= 4.1.2),
     magrittr
 Imports:
     inline,

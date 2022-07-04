@@ -8,7 +8,7 @@ A tool set to help programming.
 - 0.1.0  
   
 ### Depends  
-- R (>= 4.2.0)  
+- R (>= 4.1.2)  
 - magrittr  
   
 ### Imports  
