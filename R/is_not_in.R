@@ -10,4 +10,3 @@
 #' is_not_in("A", c("B","C","D"))
 
 'is_not_in' <- Negate('%in%')
-'%ni%' <- Negate('%in%')
