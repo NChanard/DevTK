@@ -1,5 +1,5 @@
 # DevToolKit
-A tool set to help programming.  
+A Tool set to help programming.  
   
 ### Author  
 - Nicolas Chanard \<nicolas.chanard@univ-tlse3.fr>  
