@@ -14,19 +14,19 @@ ShowLoading = function(start.tim=NULL, operation.ndx=NULL, operation.int=NULL){
     if (operation.ndx==1){
         cat(format(paste0(" ",format(100*operation.ndx/operation.int,digits=2,nsmall=2)," %"),width=9,justify = "left"),"\r")
     }else{
-        restingtime <- as.numeric( (difftime(Sys.time(),  start.tim,units="secs")   / ( operation.ndx/operation.int) ) - difftime(Sys.time(),  start.tim,units="secs"))
-        if (restingtime>3600) {
-            restingtime <- restingtime/3600
-            units <- "hours"
-        }else if (restingtime>60) {
-            restingtime <- restingtime/60
-            units <- "mins"
+        restingtime.num <- as.numeric( (difftime(Sys.time(), start.tim, units="secs")   / ( operation.ndx/operation.int) ) - difftime(Sys.time(), start.tim, units="secs"))
+        if (restingtime.num>3600) {
+            restingtime.num <- restingtime.num/3600
+            units.chr <- "hours"
+        }else if (restingtime.num>60) {
+            restingtime.num <- restingtime.num/60
+            units.chr <- "mins"
         }else{
-            units <- "secs"
+            units.chr <- "secs"
         }
         cat(
             format(paste0(" ",format(100* operation.ndx/operation.int,digits=2,nsmall=2)," %"),width=9,justify = "left"),
-            paste0(format(paste0("Resting time: ",format(round(restingtime,2),digits=2,nsmall=2)),width=19,justify = "left")," ",units),
+            paste0(format(paste0("Resting time: ",format(round(restingtime.num,2),digits=2,nsmall=2)),width=19,justify = "left")," ",units.chr),
             "\r")
     }
 }

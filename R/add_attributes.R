@@ -26,5 +26,5 @@ add_attributes <- function(var.any=NULL, attribute.lst=NULL, overwrite.bln=FALSE
     }else{
         attribute.lst <- c(attributes(var.any) , attribute.lst)
     }
-    var.any %>% set_attributes(.,attribute.lst) %>% return
+    var.any %>% magrittr::set_attributes(.,attribute.lst) %>% return
 }

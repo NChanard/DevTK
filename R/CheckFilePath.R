@@ -17,7 +17,7 @@ CheckFilePath <- function(path.pth=NULL, fileName.chr="file", format.chr="txt"){
         if(stringr::str_sub(path.pth,-1)!="/"){
             path.pth %<>% paste0("/")
         }
-        path.pth %<>% paste0(stringr::str_replace_all(fileName.chr," ","_"),"_",Versioning())
+        path.pth %<>% paste0(stringr::str_replace_all(fileName.chr," ","_"),"_",DevToolKit::Versioning())
     }
     if(dirname(path.pth)=="."){
         path.pth <- paste0(getwd(),"/",path.pth)
