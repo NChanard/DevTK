@@ -11,9 +11,9 @@ A Tool set to help programming.
 - R (>= 4.1.2)  
   
 ### Imports  
-- magrittr  
-- inline  
 - crayon  
+- inline  
+- magrittr  
 - stringr  
   
 ## 1. Instalation  
