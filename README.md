@@ -9,9 +9,9 @@ A Tool set to help programming.
   
 ### Depends  
 - R (>= 4.1.2)  
-- magrittr  
   
 ### Imports  
+- magrittr  
 - inline  
 - crayon  
 - stringr  
