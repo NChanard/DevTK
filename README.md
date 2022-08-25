@@ -8,7 +8,7 @@ Set of programming tools
 - 0.1.0  
   
 ### Depends  
-- R (>= 4.1.2)  
+- R (>= 4.1)  
   
 ### Imports  
 - crayon  
