@@ -22,7 +22,7 @@ CheckFilePath <- function(path.pth=NULL, fileName.chr="file", format.chr="txt"){
     if(dirname(path.pth)=="."){
         path.pth <- paste0(getwd(),"/",path.pth)
     }
-    if(dir.exists(dirname(path.pth)) & is.na(GetFileExtension(path.pth))){
+    if(dir.exists(dirname(path.pth)) & is.na(DevToolKit::GetFileExtension(path.pth))){
         path.pth %<>% paste0(".",format.chr)
     }
     return(path.pth)
