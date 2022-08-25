@@ -8,9 +8,9 @@ Description: A tool set to help programming.
 Depends:
     R (>= 4.1.2)
 Imports:
-    magrittr,
-    inline,
     crayon,
+    inline,
+    magrittr,
     stringr
 License: None
 Encoding: UTF-8
