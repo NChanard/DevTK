@@ -21,11 +21,11 @@
 #' my_fun(help.bln=TRUE)
 
 GetHelper = function(x.fun=NULL){
-    if(inherits(x.fun,"call")){
+    if(methods::is(x.fun,"call")){
         fun.name <- x.fun %>% deparse %>% stringr::str_split(.,"\\(") %>% unlist %>% .[1]
         x.fun <- eval(parse(text = fun.name ))
     }
-    lines.chr_vec <- x.fun %>% print %>% capture.output
+    lines.chr_vec <- x.fun %>% print %>% utils::capture.output(.)
     funName.chr     <- lines.chr_vec %>% stringr::str_subset("\\s+#Na.\\s") %>% stringr::str_replace(.,'\\s+#Na.\\s','')
     Description.chr_vec <- lines.chr_vec %>% stringr::str_subset("\\s+#De.\\s") %>% stringr::str_replace(.,'\\s+#De.\\s','') %>% paste0(collapse="\n\t\t ")
     Usage.chr_vec       <- lines.chr_vec %>% stringr::str_subset('\\s+#Us.\\s') %>% stringr::str_replace(.,'\\s+#Us.\\s','') %>% paste0(collapse="\n\t\t ")
