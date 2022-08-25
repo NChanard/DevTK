@@ -21,7 +21,7 @@
 #' my_fun(help.bln=TRUE)
 
 GetHelper = function(x.fun=NULL){
-    if(class(x.fun) == "call"){
+    if(inherits(x.fun,"call")){
         fun.name <- x.fun %>% deparse %>% stringr::str_split(.,"\\(") %>% unlist %>% .[1]
         x.fun <- eval(parse(text = fun.name ))
     }

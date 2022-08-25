@@ -1,5 +1,5 @@
-# DevToolKit
-A Tool set to help programming.  
+# DevTK
+Set of programming tools  
   
 ### Author  
 - Nicolas Chanard \<nicolas.chanard@univ-tlse3.fr>  
@@ -14,15 +14,17 @@ A Tool set to help programming.
 - crayon  
 - inline  
 - magrittr  
+- methods  
 - stringr  
+- utils  
   
 ## 1. Instalation  
 ```
-devtools::install_github("Nchanard/DevtoolKit")
+devtools::install_github("Nchanard/DevTK")
 ```
   
 ## 2. Documentation  
-https://nchanard.github.io/DevToolKit/
+https://nchanard.github.io/DevTK/
   
 ## 3. Standard  
 ### A. Variables  

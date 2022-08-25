@@ -1,4 +1,4 @@
-#' add_attributes
+#' AddAttr
 #'
 #' Add a list as attributes to any object.
 #' @param var.any <any>: an object.
@@ -9,15 +9,15 @@
 #' x <- 1:10
 #' x
 #' attribute.lst = list(dim=c(2,5))
-#' x <- add_attributes(x,attribute.lst)
+#' x <- AddAttr(x,attribute.lst)
 #' x
 #' attribute.lst = list(dim=c(5,2))
-#' x <- add_attributes(x,attribute.lst)
+#' x <- AddAttr(x,attribute.lst)
 #' x
-#' x <- add_attributes(x,attribute.lst,overwrite.bln=TRUE)
+#' x <- AddAttr(x,attribute.lst,overwrite.bln=TRUE)
 #' x
 
-add_attributes <- function(var.any=NULL, attribute.lst=NULL, overwrite.bln=FALSE){
+AddAttr <- function(var.any=NULL, attribute.lst=NULL, overwrite.bln=FALSE){
     intersectAttr <- intersect(names(attributes(var.any)),  names(attribute.lst))
     if(overwrite.bln & length(intersectAttr)){
         attribute.lst <- c(attributes(var.any)[which(names(attributes(var.any)) != intersectAttr)] , attribute.lst)
@@ -26,5 +26,5 @@ add_attributes <- function(var.any=NULL, attribute.lst=NULL, overwrite.bln=FALSE
     }else{
         attribute.lst <- c(attributes(var.any) , attribute.lst)
     }
-    var.any %>% magrittr::set_attributes(.,attribute.lst) %>% return
+    var.any %>% magrittr::set_attributes(.,attribute.lst) %>% return(.)
 }
