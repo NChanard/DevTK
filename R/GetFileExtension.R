@@ -12,5 +12,5 @@ GetFileExtension <- function(path.pth=NULL) {
     strsplit(".", fixed = TRUE) %>%
     unlist %>%
     magrittr::extract(2) %>%
-    return(.)
+    return(.data)
 }

@@ -15,15 +15,15 @@ CheckFilePath <- function(path.pth=NULL, fileName.chr="file", format.chr="txt"){
     }
     if(dir.exists(path.pth)){
         if(stringr::str_sub(path.pth,-1)!="/"){
-            path.pth %<>% paste0("/")
+            path.pth %<>% paste0(.data,"/")
         }
-        path.pth %<>% paste0(stringr::str_replace_all(fileName.chr," ","_"),"_",DevTK::Versioning())
+        path.pth %<>% paste0(.data,stringr::str_replace_all(fileName.chr," ","_"),"_",DevTK::Versioning())
     }
     if(dirname(path.pth)=="."){
         path.pth <- paste0(getwd(),"/",path.pth)
     }
     if(dir.exists(dirname(path.pth)) & is.na(DevTK::GetFileExtension(path.pth))){
-        path.pth %<>% paste0(".",format.chr)
+        path.pth %<>% paste0(.data,".",format.chr)
     }
     return(path.pth)
 }

@@ -22,16 +22,16 @@
 
 GetHelper = function(x.fun=NULL){
     if(methods::is(x.fun,"call")){
-        fun.name <- x.fun %>% deparse %>% stringr::str_split(.,"\\(") %>% unlist %>% .[1]
+        fun.name <- x.fun %>% deparse %>% stringr::str_split("\\(") %>% unlist %>% magrittr::extract(1)
         x.fun <- eval(parse(text = fun.name ))
     }
-    lines.chr_vec <- x.fun %>% print %>% utils::capture.output(.)
-    funName.chr     <- lines.chr_vec %>% stringr::str_subset("\\s+#Na.\\s") %>% stringr::str_replace(.,'\\s+#Na.\\s','')
-    Description.chr_vec <- lines.chr_vec %>% stringr::str_subset("\\s+#De.\\s") %>% stringr::str_replace(.,'\\s+#De.\\s','') %>% paste0(collapse="\n\t\t ")
-    Usage.chr_vec       <- lines.chr_vec %>% stringr::str_subset('\\s+#Us.\\s') %>% stringr::str_replace(.,'\\s+#Us.\\s','') %>% paste0(collapse="\n\t\t ")
-    Args.chr_vec        <- lines.chr_vec %>% stringr::str_subset('\\s+#Ar.\\s') %>% stringr::str_replace(.,'\\s+#Ar.\\s','') %>% paste0(collapse="\n\t\t ")
-    Values.chr_vec      <- lines.chr_vec %>% stringr::str_subset('\\s+#Va.\\s') %>% stringr::str_replace(.,'\\s+#Va.\\s','') %>% paste0(collapse="\n\t\t ")
-    Example.chr_vec     <- lines.chr_vec %>% stringr::str_subset('\\s+#Ex.\\s') %>% stringr::str_replace(.,'\\s+#Ex.\\s','') %>% paste0(collapse="\n\t\t ")
+    lines.chr_vec <- x.fun %>% print %>% utils::capture.output()
+    funName.chr         <- lines.chr_vec %>% stringr::str_subset("\\s+#Na.\\s") %>% stringr::str_replace('\\s+#Na.\\s','')
+    Description.chr_vec <- lines.chr_vec %>% stringr::str_subset("\\s+#De.\\s") %>% stringr::str_replace('\\s+#De.\\s','') %>% paste0(collapse="\n\t\t ")
+    Usage.chr_vec       <- lines.chr_vec %>% stringr::str_subset('\\s+#Us.\\s') %>% stringr::str_replace('\\s+#Us.\\s','') %>% paste0(collapse="\n\t\t ")
+    Args.chr_vec        <- lines.chr_vec %>% stringr::str_subset('\\s+#Ar.\\s') %>% stringr::str_replace('\\s+#Ar.\\s','') %>% paste0(collapse="\n\t\t ")
+    Values.chr_vec      <- lines.chr_vec %>% stringr::str_subset('\\s+#Va.\\s') %>% stringr::str_replace('\\s+#Va.\\s','') %>% paste0(collapse="\n\t\t ")
+    Example.chr_vec     <- lines.chr_vec %>% stringr::str_subset('\\s+#Ex.\\s') %>% stringr::str_replace('\\s+#Ex.\\s','') %>% paste0(collapse="\n\t\t ")
     return(
         paste0(
             "\n\n\n ",
