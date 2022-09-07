@@ -1,5 +1,4 @@
 # DevTK <a href='https://nchanard.github.io/DevTK/'><img src='man/figures/logo.png' align="right" height="139" /></a>
-# DevTK
 Set of programming tools  
   
 ### Author  
