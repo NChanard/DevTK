@@ -2,7 +2,7 @@
 title: "Standard"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteEngine{knitr::knitr}
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteIndexEntry{Standard}
   %\usepackage[UTF-8]{inputenc}
 ---
