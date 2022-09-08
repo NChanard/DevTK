@@ -3,7 +3,7 @@ title: "Standard"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteEngine{knitr::knitr}
-  %\VignetteIndexEntry{Title of your vignette}
+  %\VignetteIndexEntry{Standard}
   %\usepackage[UTF-8]{inputenc}
 ---
 
