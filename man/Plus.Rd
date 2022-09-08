@@ -2,7 +2,7 @@
 % Please edit documentation in R/Plus.R
 \name{Plus}
 \alias{Plus}
-\title{Plus}
+\title{Sum by removing NA.}
 \usage{
 Plus(x)
 }
@@ -14,6 +14,9 @@ The sum of numbers.
 }
 \description{
 Perform sum by removing NA. If all values are NA return NA instead 0.
+}
+\details{
+Plus
 }
 \examples{
 Plus(c(1,2,3))

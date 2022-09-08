@@ -1,0 +1,30 @@
+template:
+  bootstrap: 5
+
+reference:
+- title: Files
+  contents:
+  - CheckFilePath
+  - GetFileExtension
+  - GetFileName
+  - IsPath
+
+- title: Verbosity
+  contents:
+  - GetHelper
+  - ShowLoading
+
+- title: Other
+  contents:
+  - AddAttr
+  - KillZombies
+  - NotIn
+  - Plus
+  - Versioning
+
+articles:
+- title: Other
+  navbar: ~
+  contents:
+  - Standard  
+

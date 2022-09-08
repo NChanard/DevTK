@@ -1,6 +1,7 @@
+#' Remove zombie process.
+#' 
 #' KillZombies
-#'
-#' Kill zombie process after parallel work
+#' @description Kill zombie process after parallel work.
 #' @examples
 #' KillZombies()
 

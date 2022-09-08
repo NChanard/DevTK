@@ -1,7 +1,8 @@
-#' GetHelper
+#' Create pseudo documentation.
 #'
-#' Help developpers to create a documentation directly in a function. Usefull when the function is not in a library.
-#' @param x.fun <function or call>: a function (or a call of) with the Helper Header.
+#' GetHelper
+#' @description Help developpers to create a documentation directly in a function. Usefull when the function is in a source script.
+#' @param x.fun <function or call>: a function (or a call of) with the Helper header.
 #' @return A character string ready to use in 'cat' function.
 #' @examples
 #' my_fun = function(x,y,z, help.bln=F){

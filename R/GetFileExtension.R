@@ -1,6 +1,7 @@
-#' GetFileExtension
+#' Get file extension
 #'
-#' Give the extension of a file from the path.
+#' GetFileExtension
+#' @description Give the extension of a file from the path.
 #' @param path.pth <character>: the path to the file.
 #' @return A character string
 #' @examples
@@ -14,3 +15,4 @@ GetFileExtension <- function(path.pth=NULL) {
     magrittr::extract(2) %>%
     return(.data)
 }
+

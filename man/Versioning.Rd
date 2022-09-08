@@ -2,15 +2,18 @@
 % Please edit documentation in R/Versioning.R
 \name{Versioning}
 \alias{Versioning}
-\title{Versioning}
+\title{Create a version number.}
 \usage{
 Versioning()
 }
 \value{
-A character string
+A character string.
 }
 \description{
 Create a version number based on date.
+}
+\details{
+Versioning
 }
 \examples{
 Versioning()

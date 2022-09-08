@@ -2,22 +2,25 @@
 % Please edit documentation in R/AddAttr.R
 \name{AddAttr}
 \alias{AddAttr}
-\title{AddAttr}
+\title{Add list as attributes.}
 \usage{
 AddAttr(var.any = NULL, attribute.lst = NULL, overwrite.bln = FALSE)
 }
 \arguments{
-\item{var.any}{<any>: an object.}
+\item{var.any}{<any>: an object to which attributes are to be added.}
 
 \item{attribute.lst}{<list>: a named list of new attributes.}
 
-\item{overwrite.bln}{<logical>: a boolean that indicate if need and overwrite if two attributes (new and old) have same name. (Default FALSE)}
+\item{overwrite.bln}{<logical>: whether an overwrite is required on attributes with the same name.(Default FALSE)}
 }
 \value{
-the object with new attributes
+the object with new attributes.
 }
 \description{
-Add a list as attributes to any object.
+Add list as attributes to any object with or without overwrite.
+}
+\details{
+AddAttr
 }
 \examples{
 x <- 1:10

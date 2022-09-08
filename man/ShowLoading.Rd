@@ -2,7 +2,7 @@
 % Please edit documentation in R/ShowLoading.R
 \name{ShowLoading}
 \alias{ShowLoading}
-\title{ShowLoading}
+\title{Show the loading of a looping operation.}
 \usage{
 ShowLoading(start.tim = NULL, operation.ndx = NULL, operation.int = NULL)
 }
@@ -15,6 +15,9 @@ ShowLoading(start.tim = NULL, operation.ndx = NULL, operation.int = NULL)
 }
 \description{
 Show the loading of a looping operation.
+}
+\details{
+ShowLoading
 }
 \examples{
 start.tim <- Sys.time()

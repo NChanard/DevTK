@@ -2,22 +2,25 @@
 % Please edit documentation in R/CheckFilePath.R
 \name{CheckFilePath}
 \alias{CheckFilePath}
-\title{CheckFilePath}
+\title{Check if a file path is valid.}
 \usage{
 CheckFilePath(path.pth = NULL, fileName.chr = "file", format.chr = "txt")
 }
 \arguments{
 \item{path.pth}{<character>: the file path to check and complete if not complete.}
 
-\item{fileName.chr}{<character>: the name of the file to complete if not in path.pth}
+\item{fileName.chr}{<character>: the name of the file to complete if not in `path.pth`.}
 
-\item{format.chr}{<character>: the extension format of the file to complete if not in path.pth}
+\item{format.chr}{<character>: the extension format of the file to complete if not in `path.pth`.}
 }
 \value{
-A character string
+A character string.
 }
 \description{
-Function that check if a file path is valid. If a file not exist, complete or create the file path with the name and extension given to the function.
+Check if a file path is valid. If a file not exist, complete or create the file path with the name and extension given to the function.
+}
+\details{
+CheckFilePath
 }
 \examples{
 CheckFilePath(path.pth="my/path/to/my/file.txt")

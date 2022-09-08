@@ -1,8 +1,9 @@
-#' NotIn
+#' Binary operator, inverse to \%in\%.
 #'
-#' 'NotIn' and '\%ni\%' are binary operator, inverse to \%in\%.
-#' @param ... <vector or NULL>: the values to be matched against
-#' @return  A boolean
+#' NotIn
+#' @description Binary operator, inverse to \%in\%.
+#' @param ... <vector or NULL>: the values to be matched against.
+#' @return  A boolean.
 #' @examples
 #' "A" %>% NotIn(c("A","B","C"))
 #' "A" %>% NotIn(c("B","C","D"))

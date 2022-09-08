@@ -2,7 +2,7 @@
 % Please edit documentation in R/IsPath.R
 \name{IsPath}
 \alias{IsPath}
-\title{IsPath}
+\title{Check if a character string is a file path.}
 \usage{
 IsPath(var.any)
 }
@@ -13,7 +13,10 @@ IsPath(var.any)
 A boolean
 }
 \description{
-Check if a variable is a path of an existing file
+Check if a character string is a path of an existing file.
+}
+\details{
+IsPath
 }
 \examples{
 file.create("test.file", showWarnings = TRUE)

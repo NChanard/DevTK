@@ -2,18 +2,21 @@
 % Please edit documentation in R/GetHelper.R
 \name{GetHelper}
 \alias{GetHelper}
-\title{GetHelper}
+\title{Create pseudo documentation.}
 \usage{
 GetHelper(x.fun = NULL)
 }
 \arguments{
-\item{x.fun}{<function or call>: a function (or a call of) with the Helper Header.}
+\item{x.fun}{<function or call>: a function (or a call of) with the Helper header.}
 }
 \value{
 A character string ready to use in 'cat' function.
 }
 \description{
-Help developpers to create a documentation directly in a function. Usefull when the function is not in a library.
+Help developpers to create a documentation directly in a function. Usefull when the function is in a source script.
+}
+\details{
+GetHelper
 }
 \examples{
 my_fun = function(x,y,z, help.bln=F){

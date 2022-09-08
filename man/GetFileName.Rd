@@ -2,20 +2,23 @@
 % Please edit documentation in R/GetFileName.R
 \name{GetFileName}
 \alias{GetFileName}
-\title{GetFileName}
+\title{Get file name.}
 \usage{
 GetFileName(path.pth = NULL, ext.bln = FALSE)
 }
 \arguments{
 \item{path.pth}{<character>: the path to the file.}
 
-\item{ext.bln}{<logical>: if TRUE give the extension with the file, if FALSE give the file name without extension. (Default FALSE)}
+\item{ext.bln}{<logical>: whether the file extension should be returned with the file name. (Default FALSE)}
 }
 \value{
-A character string
+A character string.
 }
 \description{
-Function as `basename()` with the option to not return the file extension
+Function as `basename()` with the option to not return the file extension.
+}
+\details{
+GetFileName
 }
 \examples{
 filePath.pth ="my/path/to/my/file.txt"

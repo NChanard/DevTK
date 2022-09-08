@@ -2,18 +2,21 @@
 % Please edit documentation in R/NotIn.R
 \name{NotIn}
 \alias{NotIn}
-\title{NotIn}
+\title{Binary operator, inverse to \%in\%.}
 \usage{
 NotIn(...)
 }
 \arguments{
-\item{...}{<vector or NULL>: the values to be matched against}
+\item{...}{<vector or NULL>: the values to be matched against.}
 }
 \value{
-A boolean
+A boolean.
 }
 \description{
-'NotIn' and '\%ni\%' are binary operator, inverse to \%in\%.
+Binary operator, inverse to \%in\%.
+}
+\details{
+NotIn
 }
 \examples{
 "A" \%>\% NotIn(c("A","B","C"))

@@ -2,12 +2,15 @@
 % Please edit documentation in R/KillZombies.R
 \name{KillZombies}
 \alias{KillZombies}
-\title{KillZombies}
+\title{Remove zombie process.}
 \usage{
 KillZombies()
 }
 \description{
-Kill zombie process after parallel work
+Kill zombie process after parallel work.
+}
+\details{
+KillZombies
 }
 \examples{
 KillZombies()

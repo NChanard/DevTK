@@ -1,6 +1,7 @@
+#' Check if a character string is a file path.
+#' 
 #' IsPath
-#'
-#' Check if a variable is a path of an existing file
+#' @description Check if a character string is a path of an existing file.
 #' @param var.any <any>: a variable
 #' @return  A boolean
 #' @examples

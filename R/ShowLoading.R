@@ -1,6 +1,7 @@
-#' ShowLoading
-#'
 #' Show the loading of a looping operation.
+#'
+#' ShowLoading
+#' @description Show the loading of a looping operation.
 #' @param start.tim <POSIXct POSIXt>: A time obtain with 'Sys.time()'.
 #' @param operation.ndx <integer>: The index number of the operation.
 #' @param operation.int <integer>: The total number of operation.

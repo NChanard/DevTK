@@ -1,7 +1,8 @@
-#' Versioning
+#' Create a version number.
 #'
-#' Create a version number based on date.
-#' @return A character string
+#' Versioning
+#' @description Create a version number based on date.
+#' @return A character string.
 #' @examples
 #' Versioning()
 

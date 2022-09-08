@@ -2,7 +2,7 @@
 % Please edit documentation in R/GetFileExtension.R
 \name{GetFileExtension}
 \alias{GetFileExtension}
-\title{GetFileExtension}
+\title{Get file extension}
 \usage{
 GetFileExtension(path.pth = NULL)
 }
@@ -14,6 +14,9 @@ A character string
 }
 \description{
 Give the extension of a file from the path.
+}
+\details{
+GetFileExtension
 }
 \examples{
 filePath.pth ="my/path/to/my/file.txt"
