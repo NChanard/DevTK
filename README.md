@@ -1,4 +1,9 @@
 # DevTK <a href='https://nchanard.github.io/DevTK/'><img src='man/figures/logo.png' align="right" height="139" /></a>
+
+<!-- badges: start -->
+  [![R-CMD-check](https://github.com/NChanard/DevTK/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/NChanard/DevTK/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 Set of programming tools  
   
 ### Author  
