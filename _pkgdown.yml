@@ -19,7 +19,6 @@ reference:
   - AddAttr
   - KillZombies
   - NotIn
-  - Plus
   - Versioning
 
 articles:
