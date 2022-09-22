@@ -16,7 +16,8 @@ Imports:
     utils,
     rlang
 Suggests:
-    knitr
+    knitr,
+    rmarkdown
 License: MIT + file LICENSE
 VignetteBuilder: knitr
 Encoding: UTF-8
