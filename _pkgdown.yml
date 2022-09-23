@@ -17,7 +17,6 @@ reference:
 - title: Other
   contents:
   - AddAttr
-  - KillZombies
   - NotIn
   - Versioning
 
