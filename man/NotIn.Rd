@@ -4,10 +4,12 @@
 \alias{NotIn}
 \title{Binary operator, inverse to \%in\%.}
 \usage{
-NotIn(...)
+NotIn(lhs, rhs)
 }
 \arguments{
-\item{...}{<vector or NULL>: the values to be matched against.}
+\item{lhs}{<vector or NULL>: values to be compared against rhs}
+
+\item{rhs}{<vector or NULL>: values to be compared against lhs}
 }
 \value{
 A boolean.
