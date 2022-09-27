@@ -15,16 +15,17 @@ CheckFilePath <- function(path.pth=NULL, fileName.chr="file", format.chr="txt"){
         path.pth <- paste0(getwd())
     }
     if(dir.exists(path.pth)){
-        if(stringr::str_sub(path.pth,-1)!="/"){
-            path.pth %<>% paste0(.data,"/")
+        if(substring(path.pth, nchar(path.pth), nchar(path.pth))!="/"){
+            path.pth <- paste0(path.pth ,"/")
         }
-        path.pth %<>% paste0(.data,stringr::str_replace_all(fileName.chr," ","_"),"_",DevTK::Versioning())
+        fileName.chr <- sub(x=fileName.chr, pattern=" ", replacement="_")
+        path.pth <- paste0(path.pth,fileName.chr,"_",DevTK::Versioning())
     }
     if(dirname(path.pth)=="."){
         path.pth <- paste0(getwd(),"/",path.pth)
     }
     if(dir.exists(dirname(path.pth)) & is.na(DevTK::GetFileExtension(path.pth))){
-        path.pth %<>% paste0(.data,".",format.chr)
+        path.pth <- paste0(path.pth,".",format.chr)
     }
     return(path.pth)
 }

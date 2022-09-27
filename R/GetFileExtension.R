@@ -9,10 +9,9 @@
 #' GetFileExtension(path.pth=filePath.pth)
 
 GetFileExtension <- function(path.pth=NULL) {
-    GetFileName(path.pth, ext.bln=TRUE)  %>%
-    strsplit(".", fixed = TRUE) %>%
-    unlist %>%
-    magrittr::extract(2) %>%
-    return(.data)
+    fileName.chr <- GetFileName(path.pth, ext.bln=TRUE)  |>
+        strsplit(".", fixed = TRUE) |>
+        unlist()
+    return(fileName.chr[2])
 }
 

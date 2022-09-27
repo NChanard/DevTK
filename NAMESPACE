@@ -1,8 +1,2 @@
 exportPattern("^[[:alpha:]]+")
-export("%>%")
-importFrom(magrittr,"%>%")
-export("%<>%")
-importFrom(magrittr,"%<>%")
 importFrom("utils", "capture.output")
-importFrom("methods", "is")
-importFrom("rlang", ".data")

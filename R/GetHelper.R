@@ -21,32 +21,33 @@
 #' }
 #' my_fun(help.bln=TRUE)
 
-GetHelper = function(x.fun=NULL){
-    if(methods::is(x.fun,"call")){
-        fun.name <- x.fun %>% deparse %>% stringr::str_split("\\(") %>% unlist %>% magrittr::extract(1)
+GetHelper <- function(x.fun=NULL){
+    if(inherits(x.fun,"call")){
+        fun.name <- deparse(x.fun) |> strsplit("\\(") |> unlist()
+        fun.name <- fun.name[1]
         x.fun <- eval(parse(text = fun.name ))
     }
-    lines.chr_vec <- x.fun %>% print %>% utils::capture.output()
-    funName.chr         <- lines.chr_vec %>% stringr::str_subset("\\s+#Na.\\s") %>% stringr::str_replace('\\s+#Na.\\s','')
-    Description.chr_vec <- lines.chr_vec %>% stringr::str_subset("\\s+#De.\\s") %>% stringr::str_replace('\\s+#De.\\s','') %>% paste0(collapse="\n\t\t ")
-    Usage.chr_vec       <- lines.chr_vec %>% stringr::str_subset('\\s+#Us.\\s') %>% stringr::str_replace('\\s+#Us.\\s','') %>% paste0(collapse="\n\t\t ")
-    Args.chr_vec        <- lines.chr_vec %>% stringr::str_subset('\\s+#Ar.\\s') %>% stringr::str_replace('\\s+#Ar.\\s','') %>% paste0(collapse="\n\t\t ")
-    Values.chr_vec      <- lines.chr_vec %>% stringr::str_subset('\\s+#Va.\\s') %>% stringr::str_replace('\\s+#Va.\\s','') %>% paste0(collapse="\n\t\t ")
-    Example.chr_vec     <- lines.chr_vec %>% stringr::str_subset('\\s+#Ex.\\s') %>% stringr::str_replace('\\s+#Ex.\\s','') %>% paste0(collapse="\n\t\t ")
+    lines.chr_vec <- utils::capture.output(print(x.fun))
+    funName.chr         <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#Na.\\s")] |> sub(pattern="\\s+#Na.\\s",replacement="")
+    Description.chr_vec <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#De.\\s")] |> sub(pattern="\\s+#De.\\s",replacement="") |> paste0(collapse="\n\t\t")
+    Usage.chr_vec       <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#Us.\\s")] |> sub(pattern="\\s+#Us.\\s",replacement="") |> paste0(collapse="\n\t\t")
+    Args.chr_vec        <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#Ar.\\s")] |> sub(pattern="\\s+#Ar.\\s",replacement="") |> paste0(collapse="\n\t\t")
+    Values.chr_vec      <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#Va.\\s")] |> sub(pattern="\\s+#Va.\\s",replacement="") |> paste0(collapse="\n\t\t")
+    Example.chr_vec     <- lines.chr_vec[grep(x=lines.chr_vec, pattern="\\s+#Ex.\\s")] |> sub(pattern="\\s+#Ex.\\s",replacement="") |> paste0(collapse="\n\t\t")
     return(
         paste0(
             "\n\n\n ",
             crayon::bold(crayon::underline(funName.chr)),
                 "\n\n\t",crayon::underline("Description:"),
-                    "\n\t\t ",Description.chr_vec,
+                    "\n\t\t",Description.chr_vec,
                 "\n\n\t",crayon::underline("Usage:"),
-                    "\n\t\t ",Usage.chr_vec,
+                    "\n\t\t",Usage.chr_vec,
                 "\n\n\t",crayon::underline("Arguments:"),
-                    "\n\t\t ",Args.chr_vec,
+                    "\n\t\t",Args.chr_vec,
                 "\n\n\t",crayon::underline("Value:"),
-                    "\n\t\t ",Values.chr_vec,
+                    "\n\t\t",Values.chr_vec,
                 "\n\n\t",crayon::underline("Examples:"),
-                    "\n\t\t ",Example.chr_vec,
+                    "\n\t\t",Example.chr_vec,
             "\n\n\n "
         )
     )

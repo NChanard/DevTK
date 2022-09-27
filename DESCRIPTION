@@ -10,10 +10,6 @@ Depends:
     R (>= 4.1)
 Imports:
     crayon,
-    magrittr,
-    methods,
-    rlang,
-    stringr,
     utils
 Suggests:
     covr,

@@ -7,8 +7,9 @@
 #' Versioning()
 
 Versioning <- function(){
-    d <- Sys.time()
-    s <- d %>% as.POSIXlt %>% magrittr::use_series("sec") %>% magrittr::multiply_by(1000) %>% round %>% as.character
-    if(nchar(s)<5){ s <- paste0(rep(0,(5-nchar(s))),s)}
-    paste0(format(d,"%Y:%m:%d:%H%M"),s) %>% return(.data)
+    date.tim <- Sys.time()
+    sec.tim <- as.character(round(as.POSIXlt(date.tim)$sec * 1000))
+    sec.tim <- paste0(rep(0,(5-nchar(sec.tim))),sec.tim)
+    version.chr <- paste0(format(date.tim,"%Y:%m:%d:%H%M"),sec.tim)
+    return(version.chr)
 }
