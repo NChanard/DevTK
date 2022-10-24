@@ -4,14 +4,14 @@
 \alias{ShowLoading}
 \title{Show the loading of a looping operation.}
 \usage{
-ShowLoading(start.tim = NULL, operation.ndx = NULL, operation.int = NULL)
+ShowLoading(start.tim = NULL, operation.ndx = NULL, operation.num = NULL)
 }
 \arguments{
 \item{start.tim}{<POSIXct POSIXt>: A time obtain with 'Sys.time()'.}
 
-\item{operation.ndx}{<integer>: The index number of the operation.}
+\item{operation.ndx}{<numerical>: The index number of the operation.}
 
-\item{operation.int}{<integer>: The total number of operation.}
+\item{operation.num}{<numerical>: The total number of operation.}
 }
 \description{
 Show the loading of a looping operation.

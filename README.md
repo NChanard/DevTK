@@ -18,7 +18,7 @@ You can install the development version of DevTK from
 [GitHub](https://github.com/) with:
 
 ``` r
-devtools::install_github("NChanard/DevTK")
+remotes::install_github("NChanard/DevTK")
 ```
 
 ## Documentation
